@@ -17,15 +17,15 @@ export default function IterativeDesign() {
             <span id="mobile-warning">This document is best viewed in desktop/tablet mode.</span>
 
             <section id="section-overview">
-                <div class="container">
-                    <h2 class="section-title">Overview</h2>
-                    <p class="text">
+                <div className="container">
+                    <h2 className="section-title">Overview</h2>
+                    <p className="text">
                         Iterative design is a design methodology based on a cyclic process of prototyping, testing, analyzing,
                         and refining a product.
                         As part of a UIUX course project, we, a group of 4 students, designed an emerging startup interface
                         using this approach.
                     </p>
-                    <p class="text">
+                    <p className="text">
                         The startup we focused on is Hellosaurus.
                         It is an interactive video platform for children who can play with episodes instead of just watching.
                         Since these videos are better viewed on bigger screens, and kids are likely to have better access to
@@ -200,7 +200,7 @@ export default function IterativeDesign() {
                     </p>
                     <iframe className="prototype"
                         src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FlRHeS1ZfvLgtKjByLyo8sM%2FHellosaurus-group-wireframing-st.-Nov-3%3Fnode-id%3D263380%253A462%26viewport%3D-1708%252C-778%252C0.34408414363861084%26scaling%3Dscale-down-width"
-                        allowfullscreen></iframe>
+                        allowFullScreen></iframe>
                 </div>
             </section>
 
