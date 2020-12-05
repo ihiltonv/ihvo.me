@@ -2,10 +2,21 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      extend: {
+        animation: {
+          'bounce-slow': 'bounce 3s infinite',
+        }
+      },
+
+    fontFamily: {
+      mont: ['Montserrat', 'sans-serif'],
+      nunito: ['Nunito', 'sans-serif']
+    }
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover']
+    },
   },
   plugins: [],
 }
