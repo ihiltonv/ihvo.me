@@ -63,13 +63,13 @@ export default class Home extends React.Component {
     return (
       <>
         <Head>
-          <title>My Name</title>
+          <title>Isaac Hilton-VanOsdall</title>
         </Head>
         <div className="w-1/12 hidden md:block fixed right-3 top-mid"> 
           <NavItems current={this.state.currPage} scroll={this.scroll}/>
         </div>
         <div className="container mx-auto h-10v pt-12 flex flex-row justify-between" id="top">
-            <h1 className="text-5xl font-bold font-nunito text-left">My Name</h1>
+            <h1 className="text-5xl font-bold font-nunito text-left">Isaac Hilton-VanOsdall</h1>
             <div className="flex flex-row space-x-4">
               <LinkedIn/>
               <Email/>
@@ -78,7 +78,7 @@ export default class Home extends React.Component {
         <div className="container mx-auto w-10/12 pt-12 h-83v">
           <div className="table h-70v sm:mx-12 lg:mx-64">
             <div className="table-cell align-middle">
-              <p className="font-mont text-xl"><span className="text-purple-800 font-bold">Hi, I'm [my actual name here].</span> I study computer science at Brown University with a focus on AI and Software Engineering. Born and raised in [homestate].</p>
+              <p className="font-mont text-xl"><span className="text-purple-800 font-bold">Hi, I'm Isaac.</span> I study computer science at Brown University with a focus on AI and Software Engineering. Born and raised in Barre, VT.</p>
             </div>
           </div>
         </div>
@@ -102,8 +102,14 @@ export default class Home extends React.Component {
         <div className="container mx-auto sm:w-10/12 pt-12 h-auto lg:h-83v table">
           <div className="container mx-auto mt-12 p-24 sm:w-4/5 h-3/4 table-cell align-middle">
             <div className="flex flex-col lg:flex-row justify-items-start w-full sm:w-10/12">
-              <img className="rounded-full w-64 h-64 block mx-auto lg:inline-block sm:pr-5" src="/images/profile-blank.jpg"></img>
-              <p className="mt-12 font-mont text-lg"><span className="text-purple-800 font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <img className="rounded-full w-64 h-64 block mx-auto lg:inline-block sm:mr-12" src="/images/ihiltonv.jpg"></img>
+              <div className="space-y-2">
+                <p className="mt-12 font-mont text-lg"><span className="text-purple-800 font-bold">I'm a current senior at Brown University studying Computer Science </span> with a focus on AI and Software Engineering. My interests include deep learning, web design and teaching computer science. Currently searching for a job in the Seattle area.</p>
+                <Link href="/Resume.pdf">
+                  <a className="block text-purple-800 font-bold font-mont cursor-pointer underline">My Resume</a>
+                </Link>
+                <a className="block text-purple-800 font-bold font-mont cursor-pointer underline" href="https://github.com/ihiltonv">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
