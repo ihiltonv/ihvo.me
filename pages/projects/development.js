@@ -7,7 +7,6 @@ export default function Development() {
             <title>React Development</title>
         </Head>
 
-        <body>
             <div className='mainContent'>
             <h1>Development: The Plant Shop</h1>
             <p>For this application, the goal is to implement a basic shopping interface which allows users to browse plants, sort them alphabetically, based on price (low-high or high-low) or based on the year they were discovered and filter them based on their plant family or genus. Users can add plants to their cart and view the total price of the items in their cart, and remove items from their cart. This allows for an intuitive and efficient experience as users can quickly sort by what is important to them and filter out results that are not relevant.</p>
@@ -19,7 +18,6 @@ export default function Development() {
             <h4>You can find my GitHub repo linked <a href="https://github.com/ihiltonv/cs1300-development">here.</a></h4>
 
             </div>
-        </body>
         <style jsx>{`
         body {
             margin: 0;

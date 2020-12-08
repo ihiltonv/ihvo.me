@@ -6,10 +6,9 @@ export default function ABTesting() {
             <Head>
                 <title>A/B Testing</title>
             </Head>
-            <body>
                 <div className='mainContent'>
                     <h1>Cacti: A/B Testing</h1>
-                    <h2><a href="https://hidden-everglades-47157.herokuapp.com">Two Site Designs:</a></h2>
+                    <h2>Two Site Designs:</h2>
                     <h4>Version A</h4>
                     <img src="/ab-testing/version_a.png" alt="A screenshot of the website version A"/>
                     <h4>Version B</h4>
@@ -62,8 +61,6 @@ export default function ABTesting() {
                         received</li>
                     </ul>
                 </div>
-
-                </body>
     <style jsx>{
         `/* Put your style information here! */
         body {

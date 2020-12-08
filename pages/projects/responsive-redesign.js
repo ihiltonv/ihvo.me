@@ -6,7 +6,6 @@ export default function ResponsiveRedesign() {
         <Head>
             <title>Responsive Redesign</title>
         </Head>
-        <body>
             <div className="mainContent">
                 <h1> Responsive Redesign: Ormsby's Computer Systems</h1>
                 <p>
@@ -122,7 +121,6 @@ export default function ResponsiveRedesign() {
                 certainly bumped up against many technical problems along the way, creating a website that is easy to navigate on
                 various screen sizes was a worthy challenge, especially as I am fairly new to web development.</p>
             </div>
-        </body>
     <style jsx>{`
     body {
     margin: 0;
