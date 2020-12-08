@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function ProjectGrid(props) {
+export default function ProjectGrid() {
     
     return (
         <div className="grid grid-flow-row grid-cols-2 grid-rows-2 gap-4 h-full w-full">

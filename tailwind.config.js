@@ -3,9 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
       extend: {
-        backgroundImage: theme => ({
-          'bridge': "url('/images/bridge.jpg')"
-        }),
         animation: {
           'bounce-slow': 'bounce 3s infinite',
         },
