@@ -6,7 +6,7 @@ export default function ProjectGrid() {
         <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-4 h-full w-full">
             <Link href="/projects/iterative-design">
             <div className="border-4 rounded-lg border-gray-200 w-full h-full p-5 flex flex-row justify-between cursor-pointer shadow-md transition-shadow duration-300 hover:shadow-2xl">
-                <div className="">
+                <div className="overflow-hidden">
                     <h3 className="text-lg font-nunito font-bold">Iterative Design: HelloSaurus</h3>
                     <p className="text-md font-mont">An unsolicited redesign of the startup HelloSaurus, an educational video platform for kids</p>
                 </div>

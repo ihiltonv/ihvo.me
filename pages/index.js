@@ -35,15 +35,16 @@ export default class Home extends React.Component {
 
   scrollListen = () => {
     const delta = 5
+    const top = document.getElementById("top").getBoundingClientRect()['y'] - delta
     const projOffset =  document.getElementById("projects").getBoundingClientRect()['y'] - delta
     const aboutMeOffset = document.getElementById("aboutme").getBoundingClientRect()['y'] - delta
-    if (projOffset > 0) {
+    if (Math.abs(top) < Math.abs(projOffset)) {
       if (this.state.currPage !== "home") {
         this.setState({
           currPage: "home"
         })
       }
-    } else if (aboutMeOffset > 0) {
+    } else if (Math.abs(projOffset) < Math.abs(aboutMeOffset)) {
       if (this.state.currPage !== "projects") {
         this.setState({
           currPage: "projects"
