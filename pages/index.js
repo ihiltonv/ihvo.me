@@ -78,7 +78,7 @@ export default class Home extends React.Component {
         <div className="container mx-auto w-10/12 pt-12 h-83v">
           <div className="table h-70v sm:mx-12 lg:mx-64">
             <div className="table-cell align-middle">
-              <p className="font-mont text-xl"><span className="text-purple-800 font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p className="font-mont text-xl"><span className="text-purple-800 font-bold">Hi, I'm [my actual name here].</span> I study computer science at Brown University with a focus on AI and Software Engineering. Born and raised in [homestate].</p>
             </div>
           </div>
         </div>
