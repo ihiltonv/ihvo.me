@@ -6,7 +6,7 @@ export default function IterativeDesign() {
         <Head>
             <title>Iterative Design</title>
         </Head>
-        <body>
+        <div className="main-content">
             <section id="section-main-title">
                 <div className="container">
                     <h1 id="main-title">Iterative Design</h1>
@@ -253,9 +253,9 @@ export default function IterativeDesign() {
                         </ul>
                 </div>
             </section>
-        </body>
+            </div>
         <style jsx>{`
-        body {
+        .main-content {
             margin: 0;
             padding: 0;
             width: 100%;

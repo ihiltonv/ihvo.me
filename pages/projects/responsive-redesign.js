@@ -6,7 +6,6 @@ export default function ResponsiveRedesign() {
         <Head>
             <title>Responsive Redesign</title>
         </Head>
-        <body>
             <div className="mainContent">
                 <h1> Responsive Redesign: Ormsby's Computer Systems</h1>
                 <p>
@@ -122,15 +121,7 @@ export default function ResponsiveRedesign() {
                 certainly bumped up against many technical problems along the way, creating a website that is easy to navigate on
                 various screen sizes was a worthy challenge, especially as I am fairly new to web development.</p>
             </div>
-        </body>
     <style jsx>{`
-    body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-
     h1 {
         text-align: center;
     }
@@ -145,6 +136,8 @@ export default function ResponsiveRedesign() {
     }
 
     .mainContent {
+        background-color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         margin-right: 20%;
         margin-left: 20%;
         box-shadow: 0 10px 30px rgba(0, 0,0, 0.1);
