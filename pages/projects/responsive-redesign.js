@@ -122,13 +122,6 @@ export default function ResponsiveRedesign() {
                 various screen sizes was a worthy challenge, especially as I am fairly new to web development.</p>
             </div>
     <style jsx>{`
-    body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    }
-
     h1 {
         text-align: center;
     }
@@ -143,6 +136,8 @@ export default function ResponsiveRedesign() {
     }
 
     .mainContent {
+        background-color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         margin-right: 20%;
         margin-left: 20%;
         box-shadow: 0 10px 30px rgba(0, 0,0, 0.1);

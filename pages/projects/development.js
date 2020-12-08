@@ -19,18 +19,14 @@ export default function Development() {
 
             </div>
         <style jsx>{`
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
         
         h1, h2 {
             text-align: center;
         }
         
         .mainContent {
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             margin-right: 20%;
             margin-left: 20%;
             box-shadow: 0 10px 30px rgba(0, 0,0, 0.1);

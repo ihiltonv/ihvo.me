@@ -63,12 +63,6 @@ export default function ABTesting() {
                 </div>
     <style jsx>{
         `/* Put your style information here! */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
         
         a {
             color: blue
@@ -86,6 +80,8 @@ export default function ABTesting() {
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
         
         .mainContent p, h5 {

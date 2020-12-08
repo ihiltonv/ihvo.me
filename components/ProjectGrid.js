@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function ProjectGrid() {
     
     return (
-        <div className="grid grid-flow-row grid-cols-2 grid-rows-2 gap-4 h-full w-full">
+        <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-4 h-full w-full">
             <Link href="/projects/iterative-design">
             <div className="border-4 rounded-lg border-gray-200 w-full h-full p-5 flex flex-row justify-between cursor-pointer shadow-md transition-shadow duration-300 hover:shadow-2xl">
                 <div className="">
