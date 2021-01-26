@@ -11,7 +11,7 @@ export default function ProjectGrid() {
             </h3>
             <p className="text-md font-mont">
               An unsolicited redesign of the startup HelloSaurus, an educational
-              video platform for kids
+              video platform for kids.
             </p>
           </div>
           <img
@@ -62,7 +62,7 @@ export default function ProjectGrid() {
             </h3>
             <p className="text-md font-mont">
               A responsive redesign and implementation of the homepage of
-              Ormsby's Computer Systems in Central Vermont
+              Ormsby's Computer Systems in Central Vermont.
             </p>
           </div>
           <img

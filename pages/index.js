@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
-import Link from "next/link";
+import Link from "../components/typography/Link";
 import "../styles/globals.css";
 
 import NavArrow from "../components/icons/NavArrow";
@@ -10,6 +10,7 @@ import Email from "../components/icons/Email";
 import NavItems from "../components/NavItems";
 import ProjectGrid from "../components/ProjectGrid";
 import GitHub from "../components/icons/GitHub";
+import ProjectList from "../components/ProjectList";
 
 export default function Home() {
   const [currPage, setCurrPage] = useState("home");
@@ -68,7 +69,7 @@ export default function Home() {
         <NavItems current={currPage} scroll={scroll} />
       </div>
       <div
-        className="container mx-auto h-10v pt-12 flex flex-row justify-between"
+        className="container mx-auto h-10v pt-10 flex flex-row justify-between"
         id="top"
       >
         <h1 className="text-5xl font-bold font-nunito text-left">
@@ -81,12 +82,13 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto w-10/12 pt-12 h-83v">
-        <div className="table h-70v sm:mx-12 lg:mx-64">
+        <div className="table h-70v sm:mx-12 lg:mx-72">
           <div className="table-cell align-middle">
             <p className="font-mont text-xl">
               <span className="text-purple-800 font-bold">Hi, I'm Isaac.</span>{" "}
               I study computer science at Brown University with a focus on AI
-              and Software Engineering. Born and raised in Barre, VT.
+              and Software Engineering. Born and raised in Barre, VT. Currently
+              searching for a software development position on the West Coast.
             </p>
           </div>
         </div>
@@ -94,18 +96,18 @@ export default function Home() {
       <div className="h-7v">
         <NavArrow scroll={scroll} nextElement="projects" down={true} />
       </div>
-      <div className="container mx-auto h-10v pt-12" id="projects">
+      <div className="container mx-auto h-10v pt-10" id="projects">
         <h1 className="text-5xl font-bold font-nunito text-left">Projects</h1>
       </div>
       <div className="container mx-auto w-10/12 pt-12 h-auto lg:h-83v flex flex-col justify-items-center">
         <div className="container mx-auto mt-12 sm:w-4/5 h-3/4">
-          <ProjectGrid />
+          <ProjectList />
         </div>
       </div>
       <div className="hidden lg:block h-7v">
         <NavArrow scroll={scroll} nextElement="aboutme" down={true} />
       </div>
-      <div className="container mx-auto h-10v pt-12" id="aboutme">
+      <div className="container mx-auto h-10v pt-10" id="aboutme">
         <h1 className="text-5xl font-bold font-nunito text-left">About Me</h1>
       </div>
       <div className="container mx-auto sm:w-10/12 pt-12 h-auto lg:h-83v table">
@@ -123,19 +125,20 @@ export default function Home() {
                 </span>{" "}
                 with a focus on AI and Software Engineering. My interests
                 include deep learning, web design and teaching computer science.
-                Currently searching for a job on the West Coast.
+                As an avid mountain biker and rock climber I love to spend my
+                free time outdoors. I'm also am a musician, playing viola for
+                the past 15 years.
               </p>
-              <Link href="/Resume.pdf">
-                <a className="block text-purple-800 font-bold font-mont cursor-pointer underline">
-                  My Resume
-                </a>
+              <Link to="/Resume.pdf" size="text-md">
+                My Resume
               </Link>
-              <a
-                className="block text-purple-800 font-bold font-mont cursor-pointer underline"
-                href="https://github.com/ihiltonv"
+              <Link
+                to="https://github.com/ihiltonv"
+                external={true}
+                size="text-md"
               >
                 GitHub
-              </a>
+              </Link>
             </div>
           </div>
         </div>
