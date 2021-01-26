@@ -9,6 +9,7 @@ import LinkedIn from "../components/icons/LinkedIn";
 import Email from "../components/icons/Email";
 import NavItems from "../components/NavItems";
 import ProjectGrid from "../components/ProjectGrid";
+import GitHub from "../components/icons/GitHub";
 
 export default function Home() {
   const [currPage, setCurrPage] = useState("home");
@@ -74,6 +75,7 @@ export default function Home() {
           Isaac Hilton-VanOsdall
         </h1>
         <div className="flex flex-row space-x-4">
+          <GitHub />
           <LinkedIn />
           <Email />
         </div>
@@ -118,10 +120,10 @@ export default function Home() {
                 <span className="text-purple-800 font-bold">
                   I'm a current senior at Brown University studying Computer
                   Science
-                </span>
+                </span>{" "}
                 with a focus on AI and Software Engineering. My interests
                 include deep learning, web design and teaching computer science.
-                Currently searching for a job in the Seattle area.
+                Currently searching for a job on the West Coast.
               </p>
               <Link href="/Resume.pdf">
                 <a className="block text-purple-800 font-bold font-mont cursor-pointer underline">
