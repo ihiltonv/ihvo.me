@@ -111,14 +111,14 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-items-start w-full sm:w-10/12">
             <img
               className="rounded-full w-64 h-64 block mx-auto lg:inline-block sm:mr-12"
-              src="/images/ihiltonv.jpg"
+              src="/images/ihiltonv.jpeg"
             ></img>
             <div className="space-y-2">
               <p className="mt-12 font-mont text-lg">
                 <span className="text-purple-800 font-bold">
                   I'm a current senior at Brown University studying Computer
-                  Science{" "}
-                </span>{" "}
+                  Science
+                </span>
                 with a focus on AI and Software Engineering. My interests
                 include deep learning, web design and teaching computer science.
                 Currently searching for a job in the Seattle area.

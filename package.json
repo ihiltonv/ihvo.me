@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.8.6",
     "next": "10.0.3",
