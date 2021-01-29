@@ -126,8 +126,8 @@ export default function Home() {
                 with a focus on AI and Software Engineering. My interests
                 include deep learning, web design and teaching computer science.
                 As an avid mountain biker and rock climber I love to spend my
-                free time outdoors. I'm also am a musician, playing viola for
-                the past 15 years.
+                free time outdoors. I'm also a musician, playing viola for the
+                past 15 years.
               </p>
               <Link to="/Resume.pdf" size="text-md">
                 My Resume
