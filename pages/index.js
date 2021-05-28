@@ -88,7 +88,10 @@ export default function Home() {
               <span className="text-purple-800 font-bold">Hi, I'm Isaac.</span>{" "}
               I study computer science at Brown University with a focus on AI
               and Software Engineering. Born and raised in Barre, VT. Currently
-              searching for a software development position on the West Coast.
+              working as a software engineer for
+              <Link to="https://junilearning.com" external={true}>
+                Juni Learning.
+              </Link>
             </p>
           </div>
         </div>
