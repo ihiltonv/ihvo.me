@@ -1,41 +1,52 @@
-export default function NavItems(props) {
+import { FC } from "react";
+
+export enum Sections {
+  top = "top",
+  projects = "projects",
+  aboutMe = "aboutme",
+}
+
+const NavItems: FC<{
+  current: Sections;
+  scroll: (scrollTo: Sections) => void;
+}> = ({ current, scroll }) => {
   return (
     <>
       <div className="space-y-8 text-right">
         <h3
           className={
             "cursor-pointer font-nunito " +
-            (props.current === "home"
-              ? "text-xl font-bold"
-              : "text-sm text-gray-500")
+            (current === "top" ? "text-xl font-bold" : "text-sm text-gray-500")
           }
-          onClick={() => props.scroll("top")}
+          onClick={() => scroll(Sections.top)}
         >
           Home
         </h3>
         <h3
           className={
             "cursor-pointer font-nunito " +
-            (props.current === "projects"
+            (current === "projects"
               ? "text-xl font-bold"
               : "text-sm text-gray-500")
           }
-          onClick={() => props.scroll("projects")}
+          onClick={() => scroll(Sections.projects)}
         >
           Projects
         </h3>
         <h3
           className={
             "cursor-pointer font-nunito " +
-            (props.current === "aboutme"
+            (current === "aboutme"
               ? "text-xl font-bold"
               : "text-sm text-gray-500")
           }
-          onClick={() => props.scroll("aboutme")}
+          onClick={() => scroll(Sections.aboutMe)}
         >
           About Me
         </h3>
       </div>
     </>
   );
-}
+};
+
+export default NavItems;

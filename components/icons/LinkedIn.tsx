@@ -1,4 +1,4 @@
-export default function LinkedIn() {
+const LinkedIn = () => {
   return (
     <a href="https://www.linkedin.com/in/isaac-hvo/">
       <div className="w-8 h-8 cursor-pointer">
@@ -9,3 +9,5 @@ export default function LinkedIn() {
     </a>
   );
 }
+
+export default LinkedIn

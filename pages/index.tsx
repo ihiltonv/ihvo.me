@@ -1,19 +1,18 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 
 import Head from "next/head";
 import Link from "../components/typography/Link";
 import "../styles/globals.css";
 
-import NavArrow from "../components/icons/NavArrow";
+import NavArrow, { Direction } from "../components/icons/NavArrow";
 import LinkedIn from "../components/icons/LinkedIn";
 import Email from "../components/icons/Email";
-import NavItems from "../components/NavItems";
-import ProjectGrid from "../components/ProjectGrid";
+import NavItems, { Sections } from "../components/NavItems";
 import GitHub from "../components/icons/GitHub";
 import ProjectList from "../components/ProjectList";
 
-export default function Home() {
-  const [currPage, setCurrPage] = useState("home");
+const Home : FC = () => {
+  const [currPage, setCurrPage] = useState<Sections>(Sections.top);
 
   useEffect(() => {
     const callback = () => scrollListen(currPage);
@@ -21,7 +20,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", callback);
   }, [currPage]);
 
-  const scroll = (scrollTo) => {
+  const scroll = (scrollTo : Sections) => {
     const div = document.getElementById(scrollTo);
     div.scrollIntoView({ block: "start", behavior: "smooth" });
   };
@@ -30,35 +29,37 @@ export default function Home() {
     (current) => {
       const delta = 5;
       if (
-        document.getElementById("top") === null ||
-        document.getElementById("projects") === null ||
-        document.getElementById("aboutme") === null
+        document.getElementById(Sections.top) === null ||
+        document.getElementById(Sections.projects) === null ||
+        document.getElementById(Sections.aboutMe) === null
       ) {
         return;
       }
       const top =
-        document.getElementById("top").getBoundingClientRect()["y"] - delta;
+        document.getElementById(Sections.top).getBoundingClientRect()["y"] - delta;
       const projOffset =
-        document.getElementById("projects").getBoundingClientRect()["y"] -
+        document.getElementById(Sections.projects).getBoundingClientRect()["y"] -
         delta;
       const aboutMeOffset =
-        document.getElementById("aboutme").getBoundingClientRect()["y"] - delta;
+        document.getElementById(Sections.aboutMe).getBoundingClientRect()["y"] - delta;
       if (Math.abs(top) < Math.abs(projOffset)) {
-        if (current !== "home") {
-          setCurrPage("home");
+        if (current !== Sections.top) {
+          setCurrPage(Sections.top);
         }
       } else if (Math.abs(projOffset) < Math.abs(aboutMeOffset)) {
-        if (current !== "projects") {
-          setCurrPage("projects");
+        if (current !== Sections.projects) {
+          setCurrPage(Sections.projects);
         }
       } else {
-        if (current !== "aboutme") {
-          setCurrPage("aboutme");
+        if (current !== Sections.aboutMe) {
+          setCurrPage(Sections.aboutMe);
         }
       }
     },
     [currPage]
   );
+
+  const titleStyles = "text-5xl font-bold font-nunito text-left";
 
   return (
     <>
@@ -68,20 +69,15 @@ export default function Home() {
       <div className="w-1/12 hidden md:block fixed right-3 top-mid">
         <NavItems current={currPage} scroll={scroll} />
       </div>
-      <div
-        className="container mx-auto h-10v pt-10 flex flex-row justify-between"
-        id="top"
-      >
-        <h1 className="text-5xl font-bold font-nunito text-left">
-          Isaac Hilton-VanOsdall
-        </h1>
-        <div className="flex flex-row space-x-4">
-          <GitHub />
-          <LinkedIn />
-          <Email />
+      <div className="container mx-auto w-10/12 pt-12 h-screen">
+        <div className="flex flex-row justify-between" id={Sections.top}>
+          <h1 className={titleStyles}>Isaac Hilton-VanOsdall</h1>
+          <div className="flex flex-row space-x-4">
+            <GitHub />
+            <LinkedIn />
+            <Email />
+          </div>
         </div>
-      </div>
-      <div className="container mx-auto w-10/12 pt-12 h-83v">
         <div className="table h-70v sm:mx-12 lg:mx-72">
           <div className="table-cell align-middle">
             <p className="font-mont text-xl">
@@ -95,12 +91,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="h-7v">
+          <NavArrow scroll={scroll} nextElement={Sections.projects} direction={Direction.down} />
+        </div>
       </div>
-      <div className="h-7v">
-        <NavArrow scroll={scroll} nextElement="projects" down={true} />
-      </div>
-      <div className="container mx-auto h-10v pt-10" id="projects">
-        <h1 className="text-5xl font-bold font-nunito text-left">Projects</h1>
+      <div className="container mx-auto h-10v pt-10" id={Sections.projects}>
+        <h1 className={titleStyles}>Projects</h1>
       </div>
       <div className="container mx-auto w-10/12 pt-12 h-auto lg:h-83v flex flex-col justify-items-center">
         <div className="container mx-auto mt-12 sm:w-4/5 h-3/4">
@@ -108,10 +104,10 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden lg:block h-7v">
-        <NavArrow scroll={scroll} nextElement="aboutme" down={true} />
+        <NavArrow scroll={scroll} nextElement={Sections.aboutMe} direction={Direction.down} />
       </div>
-      <div className="container mx-auto h-10v pt-10" id="aboutme">
-        <h1 className="text-5xl font-bold font-nunito text-left">About Me</h1>
+      <div className="container mx-auto h-10v pt-10" id={Sections.aboutMe}>
+        <h1 className={titleStyles}>About Me</h1>
       </div>
       <div className="container mx-auto sm:w-10/12 pt-12 h-auto lg:h-83v table">
         <div className="container mx-auto mt-12 p-24 sm:w-4/5 h-3/4 table-cell align-middle">
@@ -132,13 +128,13 @@ export default function Home() {
                 free time outdoors. I'm also a musician, playing viola for the
                 past 15 years.
               </p>
-              <Link to="/Resume.pdf" size="text-md">
+              <Link to="/Resume.pdf" className="text-md">
                 My Resume
               </Link>
               <Link
                 to="https://github.com/ihiltonv"
                 external={true}
-                size="text-md"
+                className="text-md"
               >
                 GitHub
               </Link>
@@ -147,8 +143,10 @@ export default function Home() {
         </div>
       </div>
       <div className="h-7v">
-        <NavArrow scroll={scroll} nextElement="top" down={false} />
+        <NavArrow scroll={scroll} nextElement={Sections.top} direction={Direction.up} />
       </div>
     </>
   );
 }
+
+export default Home

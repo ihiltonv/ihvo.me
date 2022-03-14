@@ -1,4 +1,4 @@
-export default function Email() {
+const Email = () => {
   return (
     <a href="mailto:isaac.hiltonv@gmail.com">
       <div className="w-10 h-10 cursor-pointer">
@@ -19,4 +19,6 @@ export default function Email() {
       </div>
     </a>
   );
-}
+};
+
+export default Email;

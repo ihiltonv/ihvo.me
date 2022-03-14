@@ -1,15 +1,27 @@
-export default function NavArrow(props) {
+import { FC } from "react";
+import { Sections } from "../NavItems";
+
+export enum Direction {
+  up = "up",
+  down = "down",
+}
+
+const NavArrow: FC<{
+  scroll: (scrollTo: Sections) => void;
+  direction: Direction;
+  nextElement: Sections;
+}> = ({ scroll, direction, nextElement }) => {
   return (
     <>
       <div className="inset-x-0">
         <svg
           className="h-16 w-16 ml-auto mr-auto mb-3 animate-bounce-slow cursor-pointer"
-          onClick={() => props.scroll(props.nextElement)}
+          onClick={() => scroll(nextElement)}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          {props.down ? (
+          {direction === Direction.down ? (
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -28,4 +40,6 @@ export default function NavArrow(props) {
       </div>
     </>
   );
-}
+};
+
+export default NavArrow;

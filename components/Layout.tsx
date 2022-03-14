@@ -1,8 +1,9 @@
 import "../styles/globals.css";
 import LeftArrow from "./icons/LeftArrow";
 import Link from "next/link";
+import { FC, ReactChild } from "react";
 
-export default function Layout({ children }) {
+const Layout: FC<{ children: ReactChild }> = ({ children }) => {
   return (
     <>
       <Link href="/#projects">
@@ -16,4 +17,6 @@ export default function Layout({ children }) {
       </div>
     </>
   );
-}
+};
+
+export default Layout;

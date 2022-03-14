@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { FC } from "react";
 
-export default function ProjectGrid() {
+const ProjectGrid : FC = () => {
   return (
     <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-4 h-full w-full">
       <Link href="/projects/iterative-design">
@@ -74,3 +75,5 @@ export default function ProjectGrid() {
     </div>
   );
 }
+
+export default ProjectGrid

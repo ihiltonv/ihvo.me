@@ -1,6 +1,7 @@
+import { FC } from "react";
 import Link from "./typography/Link";
 
-export default function ProjectList() {
+const ProjectList: FC = () => {
   return (
     <>
       <div className="space-y-4 max-w-2xl mx-auto mt-10">
@@ -60,3 +61,5 @@ export default function ProjectList() {
     </>
   );
 }
+
+export default ProjectList
