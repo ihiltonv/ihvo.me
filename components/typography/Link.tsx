@@ -3,7 +3,6 @@ import { FC } from "react";
 import classNames from "classnames";
 
 const Link: FC<{ to: string; external?: boolean; className?: string }> = ({
-  children,
   to,
   external = false,
   className,
@@ -16,7 +15,7 @@ const Link: FC<{ to: string; external?: boolean; className?: string }> = ({
         className
       )}
     >
-      {children}
+      {to}
     </a>
   );
 
