@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { GALLERY_IMAGE_ROWS, GALLERY_IMAGES } from './constants';
+import { GALLERY_IMAGE_ROWS, GALLERY_IMAGES } from '../constants/gallery';
 import { TbArrowLeft, TbArrowRight, TbX } from 'react-icons/tb';
 import classNames from 'classnames';
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
